@@ -1,4 +1,4 @@
-# providerexample
+# Example APP
 
 A new Flutter application.
 
