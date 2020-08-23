@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Colors.blue, Colors.purple])),
+                colors: [Colors.blue, Colors.teal])),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -39,7 +39,7 @@ class MyHomePage extends StatelessWidget {
               height: 200,
             ),
             RaisedButton(
-                color: Colors.purple,
+                color: Colors.teal,
                 child: Text(
                   "Fetch data from Firebase Cloud Storage",
                   style: TextStyle(fontSize: 18, color: Colors.white),
@@ -89,22 +89,23 @@ class Userdataupload extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Userdata"),
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.teal,
         elevation: 0,
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton.extended(
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.teal,
           label: Text("Press to SignOut"),
           onPressed: () {
             FirebaseAuth.instance.signOut();
+            Navigator.pop(context);
           }),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
                 end: Alignment.center,
-                colors: [Colors.blue, Colors.purple])),
+                colors: [Colors.blue, Colors.teal])),
         child: Listview(),
       ),
     );

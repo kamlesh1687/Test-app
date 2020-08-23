@@ -10,9 +10,9 @@ class Login extends StatelessWidget {
             body: Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [Colors.white, Colors.teal]),
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.blue, Colors.teal]),
       ),
       child: Center(
         child: RaisedButton(

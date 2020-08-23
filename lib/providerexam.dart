@@ -36,7 +36,7 @@ class CounterData extends ChangeNotifier {
     }
   }
 
-  //user data modal
+  //user data model
   var userdata = {
     'username': user.displayName,
     'email': user.email,
@@ -51,8 +51,8 @@ Future<String> gSignInFunction() async {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignInAccount googleuser = await _googleSignIn.signIn();
   final GoogleSignInAuthentication googleAuth = await googleuser.authentication;
-  // ignore: deprecated_member_use
-  final AuthCredential credential = GoogleAuthProvider.getCredential(
+
+  final AuthCredential credential = GoogleAuthProvider.credential(
       accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
   final UserCredential authResult =
       await _auth.signInWithCredential(credential);
